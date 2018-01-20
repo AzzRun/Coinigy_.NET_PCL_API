@@ -613,7 +613,7 @@ namespace Coinigy.API
             client.DefaultRequestHeaders.Add("User-Agent", ua);
             client.DefaultRequestHeaders.Add("X-API-KEY", Api_Key);
             client.DefaultRequestHeaders.Add("X-API-SECRET", Api_Secret);
-
+            client.DefaultRequestHeaders.Add("Conten-Type", "application/json,application/json");
             var content = new FormUrlEncodedContent(postdata);
 
             var response = client.PostAsync(Server_Url + url, content).Result;
@@ -630,7 +630,7 @@ namespace Coinigy.API
             client.DefaultRequestHeaders.Add("User-Agent", ua);
             client.DefaultRequestHeaders.Add("X-API-KEY", Api_Key);
             client.DefaultRequestHeaders.Add("X-API-SECRET", Api_Secret);
-
+            client.DefaultRequestHeaders.Add("Conten-Type", "application/json,application/json");
             var content = new FormUrlEncodedContent(postdata);
 
             var response = await client.PostAsync(Server_Url + url, content);
